@@ -1,0 +1,260 @@
+<DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,width=1024">
+    <title>Varma Fotos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  
+
+  
+  <nav class="navbar"> 
+    <div class="logo">
+        <img src="images/Varma Fotos.png" alt="Logo">
+    </div>
+    <div class="navbar-container">
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="#home" class="navbar-link" id="home">Home</a></li>
+            <li class="navbar-item"><a href="#portfolio" class="navbar-link" id="portfolio">Portfolio</a></li>
+            <li class="navbar-item"><a href="#pricing" class="navbar-link" id="pricing">Pricing</a></li>
+            <li class="navbar-item"><a href="#contact" class="navbar-link" id="contact">Contact us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navbarmenu = document.querySelector(".navbar-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navbarmenu.classList.toggle("active");
+}
+
+
+// when we click on hamburger icon its close 
+
+const navbarLink = document.querySelectorAll(".navbar-link");
+
+navbarLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navbarmenu.classList.remove("active");
+}
+  </script>
+  
+      <div class="image-slider">
+        <div class="slider-container">
+            <img src="images/marriage3.jpg" alt="Image 1">
+            <img src="images/modeling5.jpg" alt="Image 2">
+            <img src="images/event3.jpg" alt="Image 3">
+            <img src="images/marriage5.jpg" alt="Image 4">
+            <img src="images/modeling6.jpg" alt="Image 5">
+            
+        </div>
+    </div>
+    <script>const sliderContainer = document.querySelector('.slider-container');
+      let index = 0;
+      
+      function showNextImage() {
+          index++;
+          if (index >= sliderContainer.children.length) {
+              index = 0;
+          }
+          sliderContainer.style.transform = `translateX(${-index * 100}%)`;
+      }
+      
+      setInterval(showNextImage, 3000); // Change image every 3 seconds
+      </script>
+
+      <div class="about">
+        <div class="title">About us</div>
+        <p>Step into Varma Fotos, where we make your wedding moments into timeless love stories! We're an passionate team that creates amazing photos and films. We're artistic, professional, and all about making you happy!
+          Our mission? To capture and celebrate your life's most beautiful stories with all their heart and charm!</p>
+      </div>
+
+      <div class="services">
+         <div class="title">Our Services</div>
+         <div class="imges">
+             <a class="tile" href="#">
+                <img src="images/service1.jpg" alt="wedding">
+                <div class="details">
+                   <span class="title">wedding</span> 
+                </div>
+              </a>
+              <a class="tile" href="#">
+                <img src="images/service2.jpg" alt="model">
+                <div class="details">
+                   <span class="title">Model</span> 
+                </div>
+              </a>
+              <a class="tile" href="#">
+                <img src="images/service3.jpg" alt="event">
+                <div class="details">
+                   <span class="title">Event</span> 
+                </div>
+              </a>
+         </div>
+      </div>
+
+      <div class="Stories">
+        <div class="title">Our Stories</div>
+        <div class="carousel" data-aos="zoom-in-up">
+          <div class="carousel__item1" >
+            <img src="images/slide 1.png" alt="Image 1">
+          </div>
+          <div class="carousel__item2" >
+            <img src="images/slide 2.jpg" alt="Image 2">
+          </div>
+          <div class="carousel__item3" >
+            <img src="images/slide 3.jpg" alt="Image 3">
+          </div>
+        </div>
+        <div class="ram">RAAM & JAANU</div>
+        <p>Step into Varma Fotos, where we make your wedding moments into timeless love stories! 
+          We're an passionate team that creates amazing photos and films. We're artistic, professional, 
+          and all about making you happy! Our mission? 
+          To capture and celebrate your life's most beautiful stories with all their heart and charm!<br>
+          <button class="readmore">Read more</button></p>
+     </div>
+
+     <div class="Clients">
+      <div class="title">Our Client’s Testimonial</div>
+      <div class="Clients-container" data-aos="flip-left">
+        <p>"Varma Fotos exceeded my expectations for our special day! Their team's attention to detail 
+          and passion for capturing beautiful moments"</p>
+        <div class="Clients-author">karthik raja .M</div>
+        <div class="Clients-role">Travel Photographer</div>
+      </div> 
+
+      <div class="Clients-container" data-aos="flip-left">
+        <p>"Varma Fotos exceeded my expectations for our special day! Their team's attention to detail 
+          and passion for capturing beautiful moments"</p>
+        <div class="Clients-author">Arun kumar .s</div>
+        <div class="Clients-role">Travel Photographer</div>
+      </div> 
+
+      <div class="Clients-container" data-aos="flip-left">
+        <p>"Varma Fotos exceeded my expectations for our special day! Their team's attention to detail 
+          and passion for capturing beautiful moments"</p>
+        <div class="Clients-author">RAAM KUMAR .R</div>
+        <div class="Clients-role">Travel Photographer</div>
+      </div> 
+     </div>
+
+     <div class="pricing">
+      <div class="title">Our Pricing</div>
+      <div class="price-content">
+  
+          <div class="pricing-card" data-aos="fade-right">
+              <div class="header">
+                  <h3>BASIC</h3>
+                  <div class="price">₹ 44,999</div>
+              </div>
+              <div class="separator"></div>
+              <div class="plan-includes">
+                  <h4>Plan Includes</h4>
+                  <ul>
+                      <li><span class="checkmark">✔</span> Traditional Photoshoot</li>
+                      <li><span class="checkmark">✔</span> Traditional Video</li>
+                      <li><span class="checkmark">✔</span> Album (250)</li>
+                      <li><span class="checkmark">✔</span> Family/couple frame</li>
+                  </ul>
+              </div>
+              <div class="details">View All Details</div>
+              <a href="#" class="book-btn">BOOK</a>
+          </div>
+          <div class="pricing-card" data-aos="fade-down">
+              <div class="header">
+                  <h3>PRO</h3>
+                  <div class="price">₹ 64,999</div>
+              </div>
+              <div class="separator"></div>
+              <div class="plan-includes">
+                  <h4>Plan Includes</h4>
+                  <ul>
+                      <li><span class="checkmark">✔</span> Traditional Photoshoot</li>
+                      <li><span class="checkmark">✔</span> Traditional Video</li>
+                      <li><span class="checkmark">✔</span> Album (350)</li>
+                      <li><span class="checkmark">✔</span> Family/couple frame</li>
+                  </ul>
+              </div>
+              <div class="details">View All Details</div>
+              <a href="#" class="book-btn">BOOK</a>
+          </div>
+          <div class="pricing-card" data-aos="fade-left">
+              <div class="header">
+                  <h3>Basic</h3>
+                  <div class="price">₹ 94,999</div>
+              </div>
+              <div class="separator"></div>
+              <div class="plan-includes">
+                  <h4>Plan Includes</h4>
+                  <ul>
+                      <li><span class="checkmark">✔</span> Traditional Photoshoot</li>
+                      <li><span class="checkmark">✔</span> Traditional Video</li>
+                      <li><span class="checkmark">✔</span> Album (500)</li>
+                      <li><span class="checkmark">✔</span> Family/couple frame</li>
+                  </ul>
+              </div>
+              <div class="details">View All Details</div>
+              <a href="#" class="book-btn">BOOK</a>
+          </div>
+  
+  
+      </div>
+  </div>
+  
+
+  <footer class="footer">
+    <div class="column-logo">
+        <img src="images/Logo.png" alt="Varma Fotos Logo">
+    </div>
+    <div class="column">
+        <h3>LINK</h3>
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <h3>SOCIAL</h3>
+        <ul>
+          <li><a href="https://www.facebook.com">Facebook</a></li>
+          <li><a href="https://www.twitter.com">Twitter</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>
+          <li><a href="https://www.youtube.com">YouTube</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <h3>CONTACT</h3>
+        <ul>
+          <li>+91 - 12345 67890</li>
+          <li><a href="mailto:varmafotos90@gmail.com">varmafotos90@gmail.com</a></li>
+          <li>123, ABC Street,<br>City Name,<br>State Name - PIN Code,<br>Country.</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
